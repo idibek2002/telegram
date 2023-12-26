@@ -7,7 +7,7 @@ interface IProps {
   onClick:()=>void; 
 }
 const UserMessage = ({ name, id, onClick }:IProps) => {
-  const isMobile = window.innerWidth
+  const isMobile = typeof window !== "undefined" ? window.innerWidth : 0
   return (
     <Link href={`/chat/${id}`} onClick={()=>{
       if(isMobile<=768){

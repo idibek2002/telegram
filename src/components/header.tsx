@@ -25,7 +25,6 @@ interface IProps {
 const Header = ({ isBack, onClick }: IProps) => {
   const index = 2;
   const userId = usePathname().split("/")[index];
-  console.log(user.find((el:IUser)=>el.id===Number(userId)));
   
   return (
     <div className="flex items-center justify-between p-6 border-b border-b-[#ffffff0d]">
