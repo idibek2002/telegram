@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mantine-AppShell-main{
+  padding-top: 0;
+}
+.sidebar-scroll::-webkit-scrollbar, body::-webkit-scrollbar{
+  background-color: #202020;
+  width: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb{
+  background-color: #838383;
+  border-radius: 50px;
+}
+.mantine-AppShell-navbar{
+  border: none !important;
+}
