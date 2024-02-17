@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { MantineProvider } from '@mantine/core'
 import { CollapseDesktop } from '@/components/sidebar'
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,6 +13,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const pathname = usePathname()
   return (
     <html lang="en">
       <head>
@@ -21,11 +24,14 @@ export default function RootLayout({
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
         <body className={inter.className}>
-            <MantineProvider>
+          <MantineProvider>
+            {pathname.includes('auth') ?
+              children :
               <CollapseDesktop>
-                  {children}
+                {children}
               </CollapseDesktop>
-            </MantineProvider>
+            }
+          </MantineProvider>
         </body>
       </head>
     </html>

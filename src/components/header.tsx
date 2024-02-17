@@ -30,7 +30,7 @@ const Header = ({ isBack, onClick }: IProps) => {
     <div className="flex items-center justify-between p-6 border-b border-b-[#ffffff0d]">
       <div className="flex items-center gap-5 cursor-pointer">
         {isBack && (
-          <Button onClick={onClick}>
+          <Button onClick={onClick} size={15}>
             <Icon name="backArrow" />
           </Button>
         )}
@@ -46,7 +46,7 @@ const Header = ({ isBack, onClick }: IProps) => {
           <h1 className="text-[#888888] text-[12px]">был(а) недавно</h1>
         </div>
       </div>
-      <div className="flex items-center justify-between gap-4">
+      {/* <div className="flex items-center justify-between gap-4">
         <Button>
           <IconSearch size={20} strokeWidth={2} color="#fff" />
         </Button>
@@ -56,7 +56,7 @@ const Header = ({ isBack, onClick }: IProps) => {
         <Button>
           <Icon name="more" />
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
