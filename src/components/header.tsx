@@ -1,7 +1,6 @@
 import { Avatar } from "@mantine/core";
 import React from "react";
 import Button from "./button";
-import { IconHeart, IconSearch } from "@tabler/icons-react";
 import Icon from "./icon";
 import { usePathname } from "next/navigation";
 interface IUser {
